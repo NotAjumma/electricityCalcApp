@@ -22,7 +22,7 @@ public class AboutActivity extends AppCompatActivity {
         github.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                gotoUrl("https://notajumma.github.io/homeLoanCalculator/profile.html");
+                gotoUrl("https://github.com/NotAjumma/electricityCalcApp");
             }
         });
     }
