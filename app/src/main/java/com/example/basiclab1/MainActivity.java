@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Html;
+import android.text.InputType;
 import android.text.SpannableString;
 import android.text.Spanned;
 import android.text.method.LinkMovementMethod;
@@ -36,7 +37,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnSubmit = findViewById(R.id.btnSubmit);
         btnClear = findViewById(R.id.btnClear);
         etKwh = findViewById(R.id.etKwh);
+        etKwh.setInputType(InputType.TYPE_CLASS_NUMBER);
         etRebate = findViewById(R.id.etRebate);
+        etRebate.setInputType(InputType.TYPE_CLASS_NUMBER);
         btnSubmit.setOnClickListener(this);
         btnClear.setOnClickListener(this);
         tvOutputCharge = findViewById((R.id.tvOutputCharge));
@@ -53,9 +56,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     public boolean onOptionsItemSelected(MenuItem item){
         switch (item.getItemId()){
+
             case R.id.about :
 
                 Intent intent = new Intent(this, AboutActivity.class);
+                startActivity(intent);
+                break;
+
+            case R.id.instruction:
+
+                intent = new Intent(this, InstructionActivity.class);
                 startActivity(intent);
                 break;
 
